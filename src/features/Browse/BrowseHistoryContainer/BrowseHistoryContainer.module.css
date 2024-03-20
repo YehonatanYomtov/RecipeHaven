@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  top: -1rem;
+  max-width: 45rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  padding-right: 4.5rem;
+  border-bottom: 1px solid var(--clr-grey-light);
+  border-right: 1px solid var(--clr-grey-light);
+}
+
+.border_bottom {
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  border-top: 1px solid var(--clr-grey-light);
+}
+
+.delete_button {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  margin-left: 2rem;
+}

@@ -1,0 +1,54 @@
+.theme_button_base {
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  top: 5rem;
+  right: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px inset;
+}
+
+.theme_button_base:hover {
+  cursor: pointer;
+}
+
+.light_theme,
+.dark_theme {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+  transition: 0.5s;
+}
+
+.light_theme {
+  background-color: #b4b4b4;
+}
+
+.dark_theme {
+  background-color: #384442;
+  transform: translateX(100%);
+}
+
+.light_theme > img,
+.dark_theme > img {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .theme_button_base {
+    width: 3rem;
+    height: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px inset;
+    border-width: 1.8px !important;
+  }
+}

@@ -1,0 +1,92 @@
+.arrow_button,
+.arrow_button_active {
+  position: absolute;
+  top: 4.5rem;
+  padding: 0.5rem 0.3rem;
+  border-radius: 7px 0 0 7px;
+  transition: 0.5s;
+  border-right: none;
+  background-color: var(--clr-blue);
+  background-color: var(--clr--main-green);
+  color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.arrow_button {
+  right: 0;
+}
+
+.arrow_button_active {
+  right: 2.5rem;
+}
+
+.arrow_button:hover,
+.arrow_button_active:hover {
+  background-color: var(--clr--hover-blue);
+  background-color: var(--clr--hover--main-green);
+}
+
+.buttons_sliding_container_active,
+.buttons_sliding_container_non_active {
+  position: absolute;
+  top: 4rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  transition: 0.5s;
+  border-radius: 7px 0 0 7px;
+  background-color: var(--clr--main-white);
+  z-index: 99;
+}
+
+.buttons_sliding_container_active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  right: 0;
+}
+
+.buttons_sliding_container_non_active {
+  right: -2.5rem;
+  box-shadow: none;
+}
+
+.breaker {
+  height: 1px;
+  width: 1rem;
+  border-bottom: 1px solid var(--clr-grey-light);
+}
+
+.delete_button {
+  position: relative;
+  padding: 0;
+  box-shadow: none;
+}
+
+.delete_button:hover {
+  background-color: transparent;
+}
+
+.delete_button > img {
+  width: 1.5rem;
+}
+
+.loading_spinner {
+  position: absolute;
+}
+
+/* .edit_button {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("/images/icons/Edit-icon.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.edit_button:hover {
+  background-image: url("/images/icons/Edit-hover-icon.png");
+  cursor: pointer;
+  transition: 0.2s;
+} */

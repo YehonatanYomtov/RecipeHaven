@@ -1,0 +1,24 @@
+.activity_bar_section {
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid var(--clr-grey-light);
+  border-radius: 15px;
+  padding: 2rem;
+
+  /*? for it's parent grid-template-areas */
+  grid-area: activityBarSection;
+
+  h1 {
+    text-align: center;
+    color: var(--clr--main-green);
+    font-size: var(--fs-3);
+    letter-spacing: 0.8px;
+    font-weight: var(--fw-bold);
+  }
+}

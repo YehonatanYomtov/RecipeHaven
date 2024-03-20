@@ -1,0 +1,35 @@
+.file_input_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: inherit;
+  transform-style: preserve-3d;
+  gap: 1rem;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .file_input,
+  .upload_image_button {
+    position: relative;
+    height: 2rem;
+    width: fit-content;
+    letter-spacing: 0.8px;
+    border: 1px solid var(--clr-blue);
+    color: var(--clr-grey-dark);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: var(--fs-1_5);
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .file_input:hover,
+  .upload_image_button:hover {
+    cursor: pointer;
+    background-color: var(--clr--hover--main-white);
+  }
+}

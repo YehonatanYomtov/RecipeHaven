@@ -1,0 +1,28 @@
+.info_tag_container h3 {
+  width: fit-content;
+  /* border-bottom: 2px solid var(--clr--main-green); */
+  border-bottom: 1.5px solid var(--clr-grey-medium);
+  /* color: var(--clr-grey-dark); */
+  color: var(--clr-blue);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-4);
+  letter-spacing: 0.8px;
+  margin-bottom: 0.8rem;
+}
+
+.info_tag_container > a {
+}
+
+.info_tag_container p {
+  margin-top: 0.5rem;
+  letter-spacing: 0.4px;
+  color: var(--clr-grey-dark);
+}
+
+.info_tag_container span {
+  font-weight: var(--fw-medium);
+}
+
+.info_tag_container strong {
+  color: var(--clr-blue);
+}

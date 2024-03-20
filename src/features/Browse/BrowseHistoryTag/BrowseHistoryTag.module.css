@@ -1,0 +1,49 @@
+.history_tag_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.history_tag_text {
+  /* height: 2rem; */
+  border-radius: 10px;
+  padding: 0.4rem 2rem 0.4rem 0.7rem;
+  color: var(--clr-blue);
+  font-size: var(--fs-1);
+}
+
+.history_tag_text:hover {
+  cursor: pointer;
+  background-color: var(--clr--hover--main-white);
+}
+
+.delete_button {
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  transform: translateY(-50%);
+  height: 1.2rem;
+  width: 1.2rem;
+  font-size: var(--fs-1);
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid transparent;
+}
+
+.delete_button:hover {
+  cursor: pointer;
+  color: var(--clr-red-1);
+  border: 1px solid var(--clr-red-1);
+  transition: 0.6s;
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .history_tag_text {
+    padding: 0.3rem 1.8rem 0.3rem 0.5rem;
+  }
+
+  .delete_button {
+    height: 1rem;
+    width: 1rem;
+  }
+}

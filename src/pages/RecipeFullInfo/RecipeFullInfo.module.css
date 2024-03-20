@@ -1,0 +1,81 @@
+.main_container {
+  position: relative;
+  padding-top: 3rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+
+  .main_container_image {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    /* border: 2px solid var(--clr-grey-light); */
+
+    z-index: -1;
+  }
+
+  button {
+    position: absolute;
+    top: 6rem;
+    left: 2rem;
+  }
+}
+
+.book_left_page,
+.book_right_page {
+  position: relative;
+  height: 80%;
+  width: 32%;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.book_left_page > h2 {
+  text-align: center;
+  font-size: var(--fs-8);
+  letter-spacing: 1px;
+  font-weight: var(--fw-medium);
+  color: var(--clr--main-green);
+  color: var(--clr-blue);
+  margin-bottom: 3rem;
+}
+
+.image_container {
+  position: relative;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--clr--main-green); */
+  border: 2px solid var(--clr--main-green);
+  border: 2px solid var(--clr-blue);
+  border-radius: 5px;
+
+  clip-path: polygon(85% 0%, 100% 15%, 100% 100%, 15% 100%, 0% 85%, 0 0);
+}
+
+.image_container > img {
+  /* align-self: center; */
+  position: absolute;
+  height: 98%;
+  width: 98%;
+  border-radius: 3px;
+
+  clip-path: polygon(85% 0%, 100% 15%, 100% 100%, 15% 100%, 0% 85%, 0 0);
+
+  z-index: 2;
+}
+
+.book_right_page {
+  overflow-y: scroll;
+}

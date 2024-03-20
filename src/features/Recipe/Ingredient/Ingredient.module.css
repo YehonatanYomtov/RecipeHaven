@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.container strong {
+  color: var(--clr-blue);
+  font-size: var(--fs-2);
+  font-weight: var(--fe-light);
+  letter-spacing: 1px;
+}
+
+.container p {
+  color: var(--clr-grey-dark);
+  font-size: var(--fs-2);
+}

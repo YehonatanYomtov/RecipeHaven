@@ -1,0 +1,79 @@
+/* .welcome_section_main_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  perspective: 10px;
+  z-index: -1;
+} */
+
+.section_1_main_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.section_1_main_container > h1 {
+  position: relative;
+  left: -18rem;
+  top: 35rem;
+  font-size: 15rem;
+  font-weight: var(--fw-thin);
+  text-align: center;
+  color: var(--clr--main-white);
+  letter-spacing: 5px;
+  transform: translateZ(-10px) scale(2);
+  text-shadow: 0 0 10px;
+  z-index: 2;
+}
+
+.kitchen_back,
+.kitchen_floor {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kitchen_back {
+  transform: translateZ(-15px) scale(2.5);
+  filter: blur(3px);
+  left: -0.7rem;
+  z-index: 99;
+}
+
+.kitchen_floor {
+  top: 80%;
+  z-index: 3;
+}
+
+.plant_1,
+.plant_2 {
+  position: absolute;
+  width: 50%;
+}
+
+.plant_1 {
+  transform: rotate(-90deg) translateZ(-11px) scale(2.1);
+  left: -72rem;
+  bottom: -15rem;
+}
+
+.plant_2 {
+  transform: rotate(-90deg) translateZ(-9px) scale(1.9);
+  left: -63rem;
+  bottom: -30rem;
+}
+
+.cover {
+  position: absolute;
+  top: 150%;
+  height: 70rem;
+  width: 100%;
+  background-color: var(--clr--main-white);
+  z-index: -2;
+}

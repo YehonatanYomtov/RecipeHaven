@@ -1,0 +1,28 @@
+.back_button {
+  position: absolute;
+  top: 5.5rem;
+  left: 1.5rem;
+
+  border: none;
+  border-bottom: 2px solid var(--clr-grey-light);
+
+  font-size: var(--fs-2);
+  padding: 0.5rem 0.2rem;
+  background-color: transparent;
+
+  letter-spacing: 0.7px;
+  color: var(--clr-grey-light);
+}
+
+.back_button:hover {
+  cursor: pointer;
+  color: var(--clr-blue) !important;
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .back_button {
+    font-size: var(--fs-1);
+    padding: 0 0.1rem 0.1rem 0;
+    border-bottom: 1.5px solid var(--clr-grey-light);
+  }
+}

@@ -1,0 +1,58 @@
+.sort_by_container {
+  position: absolute;
+  top: 2rem;
+  right: 20%;
+  transform: translateX(80%);
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  label {
+    color: var(--clr-blue);
+    letter-spacing: 0.7px;
+    font-size: var(--fs-2);
+  }
+
+  .sort_by_button {
+    padding: 0.5rem;
+    border: 1.5px solid var(--clr-grey-medium);
+    border-radius: 10px;
+    color: var(--clr-grey-light);
+    letter-spacing: 0.7px;
+    font-size: var(--fs-1_5);
+    text-align: center;
+  }
+
+  .sort_by_button:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sort_by_container {
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.5rem;
+
+    label {
+      font-size: var(--fs-2);
+    }
+  }
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .sort_by_container {
+    label {
+      font-size: var(--fs-1_5);
+    }
+
+    .sort_by_button {
+      padding: 0.15rem 0;
+
+      /* padding: 0.2rem; */
+      font-size: var(--fs-1);
+    }
+  }
+}

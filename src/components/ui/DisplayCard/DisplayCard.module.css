@@ -1,0 +1,56 @@
+.card_container {
+  position: relative;
+  height: 25rem;
+  width: 17rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--clr--main-white);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  user-select: none;
+}
+
+.card_container img,
+.card_container h2,
+.card_container p {
+  position: relative;
+  transform: translateZ(50px);
+}
+
+.card_container img {
+  width: 5rem;
+}
+
+.card_container h2 {
+  color: var(--clr--main-green);
+  letter-spacing: 1px;
+  font-size: var(--fs-3);
+  border-bottom: 3px double var(--clr-grey-light);
+  padding-bottom: 1rem;
+}
+
+.card_container p {
+  font-size: var(--fs-1_5);
+  color: var(--clr-grey-dark);
+  letter-spacing: 0.7px;
+  line-height: 1.45rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.straps_decoration {
+  position: absolute;
+  bottom: 2rem;
+  right: -6rem;
+  width: 100%;
+  height: 3rem;
+  border-top: 1rem solid var(--clr--main-green-light);
+  border-bottom: 1rem solid var(--clr--main-green-light);
+  rotate: -45deg;
+  z-index: 1;
+}

@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  padding: 15rem 2rem 2rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--clr--main-white);
+}
+
+.animation {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  height: 95vh;
+  width: 62vw;
+}
+
+/* .animation > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+} */
+
+.notebook {
+  position: absolute;
+  width: 47vw;
+  top: 5vh;
+  right: -40vw;
+}
+
+.notebook_animation {
+  transform: translateX(-53vw) rotate(-30deg);
+  transition: 1.5s;
+}
+
+.cup_coffee_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.cup_coffee {
+  position: relative;
+  width: 30vw;
+  right: -3vw;
+  top: -70vh;
+  border-radius: 100%;
+}
+
+.cup_coffee_animation {
+  transform: translateY(52vh) rotate(740deg);
+  transition-delay: 1s;
+  transition-duration: 1.5s;
+}
+
+.red_pen {
+  position: absolute;
+  width: 25vw;
+  left: -20vw;
+  bottom: -40vh;
+  border-radius: 100%;
+}
+
+.red_pen_animation {
+  transition-delay: 0.3s;
+  transition-duration: 1s;
+
+  transform: translate(30vw, -60vh) rotate(-45deg);
+}
+
+/* .red_pen.active {
+  transform: translate(60vh, -35vw) rotate(-45deg);
+  transition: 1s;
+  transition-delay: 0.7s;
+} */
+
+/* animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-start: -20rem;
+  animation-range-end: 30rem; */
+
+.container div > label {
+  color: var(--clr-blue);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+.container div input {
+  width: 25rem;
+  z-index: 99;
+}
+
+.container > button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,56 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1705924270110,
+        "children": [],
+        "todo": {
+          "content": "Make functionality for all the amounts (creating, deletig, liked) with firebase.",
+          "id": 1705924270110,
+          "level": "warning",
+          "done": true,
+          "start": 1705924270110,
+          "focus": false,
+          "end": 1705935620874
+        }
+      },
+      {
+        "key": 1705924361973,
+        "children": [],
+        "todo": {
+          "content": "Add a Edit button for the RecipeCard component.",
+          "id": 1705924361973,
+          "level": "warning",
+          "done": true,
+          "start": 1705924361973,
+          "focus": false,
+          "end": 1705941184581
+        }
+      },
+      {
+        "key": 1706018133847,
+        "children": [],
+        "todo": {
+          "content": "Sort images into folders",
+          "id": 1706018133847,
+          "level": "warning",
+          "done": false,
+          "start": 1706018133847
+        }
+      }
+    ],
+    "expandKeys": [],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": "*",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1706018174418"
+  }
+}

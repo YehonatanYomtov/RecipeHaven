@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 4.5rem;
+}
+
+.text {
+  color: var(--clr--main-green);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-5);
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .logo {
+    width: 2.5rem;
+  }
+
+  .text {
+    color: var(--clr--main-green);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-3);
+  }
+}

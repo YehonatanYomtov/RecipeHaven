@@ -1,0 +1,25 @@
+.delete_button {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+.delete_button > div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  background-image: url("/images/icons/Delete-icon.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.delete_button > div:hover {
+  cursor: pointer;
+  background-image: url("/images/icons/Delete-hover-icon.png");
+  transition: 0.2s;
+}

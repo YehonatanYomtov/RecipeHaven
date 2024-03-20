@@ -1,0 +1,14 @@
+.container {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--clr--main-green); */
+  background-color: var(--clr--main-white);
+}
+
+.text {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-medium);
+  color: var(--clr-grey-dark);
+}

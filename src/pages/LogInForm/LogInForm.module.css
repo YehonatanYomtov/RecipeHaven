@@ -1,0 +1,106 @@
+.container_main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/backgrounds/Signup-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.form_container {
+  height: 38rem;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.blur {
+  position: absolute;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  filter: blur(1.1px);
+  border: 0.3px solid white;
+  background-color: rgba(49, 84, 94, 0.428);
+}
+
+.form_container > h1 {
+  position: relative;
+  top: 1rem;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-thin);
+  color: var(--clr--main-white);
+  letter-spacing: 1px;
+  transform: translateZ(30px);
+}
+
+.input {
+  position: relative;
+  width: 23rem;
+  height: 3rem;
+  background-color: transparent;
+  padding: 1rem 0;
+  border-radius: 0;
+  transform: translateZ(30px);
+  border-bottom: 1.5px solid var(--clr--main-white);
+  color: var(--clr--main-white);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.input:focus {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  border-bottom: 1.5px solid var(--clr-blue);
+}
+
+.input:focus::-webkit-input-placeholder {
+  color: var(--clr-blue-light);
+}
+
+.input::-webkit-input-placeholder {
+  /* color: rgb(236, 236, 236); */
+  color: rgba(240, 240, 240, 0.836);
+}
+
+.no_account {
+  position: relative;
+  letter-spacing: 1px;
+  color: var(--clr--main-white);
+  transform: translateZ(20px);
+}
+
+.link {
+  color: var(--clr-blue-light);
+}
+
+.link:hover {
+  color: rgb(0, 255, 0);
+}
+
+.log_in_button {
+  position: relative;
+  bottom: 1rem;
+  border: 1.5px solid var(--clr--main-white);
+  color: var(--clr--main-white);
+  background-color: transparent;
+  transform: translateZ(30px);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 20px -20px;
+}
+
+.log_in_button:hover {
+  border: 1.5px solid var(--clr-blue);
+  background-color: rgba(0, 0, 0, 0.098);
+}
+
+.error {
+  text-align: center;
+  color: var(--clr-red-4);
+}

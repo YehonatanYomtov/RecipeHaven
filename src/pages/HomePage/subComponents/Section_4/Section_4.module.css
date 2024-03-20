@@ -1,0 +1,36 @@
+.section_4_main_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: var(--clr--main-white);
+  overflow: hidden;
+}
+
+.section_4_main_container > h1 {
+  font-size: 10rem;
+  font-weight: var(--fw-thin);
+  color: var(--clr--main-green);
+  letter-spacing: 5px;
+  border-bottom: 2px solid var(--clr-grey-light);
+  z-index: 2;
+}
+
+.section_4_bg {
+  position: absolute;
+  width: 100%;
+  bottom: -5rem;
+}
+
+.cards_container {
+  display: flex;
+  gap: 10vw;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  z-index: 2;
+}

@@ -1,0 +1,93 @@
+.account_section_main_container {
+  position: relative;
+  height: 100%;
+  margin-bottom: auto;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid var(--clr-grey-light);
+  z-index: 99;
+  /*? for it's parent grid-template-areas */
+  grid-area: accountSection;
+
+  .change_profile_image_section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .text_button_container,
+  a {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    font-size: var(--fs-1_5);
+    color: var(--clr-grey-dark);
+    letter-spacing: 0.5px;
+    z-index: 99;
+  }
+
+  .text_button_container:hover,
+  a:hover {
+    cursor: pointer;
+    color: var(--clr--main-green);
+    color: var(--clr-green-5);
+  }
+
+  .icon {
+    background-position: center;
+    background-size: cover;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 99;
+  }
+
+  .text_button_container:hover > .icon,
+  a:hover > .icon {
+    scale: 1.5;
+    transform: translateX(-2px);
+    transition: 0.3s;
+  }
+
+  .view_icon {
+    background-image: url("/images/icons/View-icon.png");
+  }
+
+  a:hover .view_icon {
+    background-image: url("/images/icons/View-hover-icon.png");
+  }
+
+  .add_icon {
+    background-image: url("/images/icons/Add-icon.png");
+  }
+
+  a:hover .add_icon {
+    background-image: url("/images/icons/Add-hover-icon.png");
+  }
+
+  .change_image_icon {
+    background-image: url("/images/icons/Change-image-icon.png");
+  }
+
+  .text_button_container:hover .change_image_icon {
+    background-image: url("/images/icons/Change-image-hover-icon.png");
+  }
+
+  .clear_icon {
+    background-image: url("/images/icons/Clean-icon.png");
+  }
+
+  .text_button_container:hover .clear_icon {
+    background-image: url("/images/icons/Clean-hover-icon.png");
+  }
+
+  .log_out_icon {
+    background-image: url("/images/icons/Signout-icon.png");
+  }
+
+  .text_button_container:hover .log_out_icon {
+    background-image: url("/images/icons/Signout-hover-icon.png");
+  }
+}

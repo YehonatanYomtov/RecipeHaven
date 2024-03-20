@@ -1,0 +1,19 @@
+.active {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 43%;
+  transform: translateX(-43%);
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .browse_filter_button {
+    padding: 0.5rem 0.65rem;
+    font-size: var(--fs-1);
+    letter-spacing: 0.8px;
+  }
+
+  .active {
+    left: 40%;
+    transform: translateX(-58%);
+  }
+}

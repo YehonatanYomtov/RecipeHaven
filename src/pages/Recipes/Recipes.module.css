@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--clr--main-white);
+}
+
+.container > button {
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  z-index: 99;
+}
+
+.left_button,
+.right_button {
+  color: var(--clr-grey-dark);
+  letter-spacing: 2px;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-light);
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left_button:hover {
+  background-image: url("images/Create-recipes_button.png");
+  transform: translateX(-25%) scale(1.5);
+}
+
+.left_button:hover > p {
+  transform: translateX(25%);
+  scale: 1;
+  transition: 4.5s;
+}
+
+.right_button:hover {
+  background-image: url("images/My-recipes.jpg");
+  transform: translateX(25%) scale(1.5);
+}
+
+.right_button:hover > p {
+  color: var(--clr--main-white);
+  transform: translateX(-25%);
+  scale: 1;
+  transition: transform 4.5s;
+}
+
+.left_button:hover,
+.right_button:hover {
+  transition: 7s;
+}

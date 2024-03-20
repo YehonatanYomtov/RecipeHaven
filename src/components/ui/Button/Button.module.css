@@ -1,0 +1,50 @@
+.button,
+.blue {
+  height: fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.3rem;
+  font-size: var(--fs-2);
+  letter-spacing: 1px;
+}
+
+.button {
+  color: var(--clr-grey-dark);
+  background-color: var(--clr--main-white);
+  box-shadow: var(--box-shadow--main);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--clr--hover--main-white);
+}
+
+.blue-hollow {
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid var(--clr-blue);
+  border-radius: 10px;
+  padding: 0.8rem 1.3rem;
+  font-size: var(--fs-2);
+  color: var(--clr-blue);
+  background-color: var(--clr--main-white);
+  box-shadow: var(--box-shadow--main);
+}
+
+.blue-hollow:hover {
+  cursor: pointer;
+  color: var(--clr--main-white);
+  background-color: var(--clr--hover-blue);
+}
+
+.blue {
+  color: var(--clr--main-white);
+  background-color: var(--clr-blue);
+  box-shadow: var(--box-shadow--main);
+}
+
+.blue:hover {
+  cursor: pointer;
+  background-color: var(--clr--hover-blue);
+}
