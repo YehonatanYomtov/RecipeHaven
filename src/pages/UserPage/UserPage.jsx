@@ -1,3 +1,6 @@
+//* react-hooks
+import { useMemo } from "react";
+
 //* redux
 import { useSelector } from "react-redux";
 
@@ -16,7 +19,6 @@ import { filterRecipesOfCurrentUser } from "../../utils/filterRecipesOfCurrentUs
 
 //* styles
 import styles from "./UserPage.module.css";
-import { useMemo } from "react";
 
 function useFilterRecipesOfCurrentUser(array, userId) {
   return useMemo(

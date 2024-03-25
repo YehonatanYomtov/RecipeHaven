@@ -1,3 +1,6 @@
+//* react-hooks
+import { useRef } from "react";
+
 //* 3rd-party-dashboard-library
 import { Bar } from "react-chartjs-2";
 import {
@@ -18,7 +21,6 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 //* styles
 import styles from "./ActivityBarSection.module.css";
-import { useRef } from "react";
 // import { useResizeObserver } from "../../../hooks/useResizeObserver";
 
 function ActivityBarSection({ data }) {
