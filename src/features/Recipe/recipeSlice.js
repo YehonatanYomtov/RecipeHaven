@@ -70,7 +70,10 @@ const recipeSlice = createSlice({
     addCasePendingTemplate(builder, createNewRecipe);
     builder.addCase(createNewRecipe.fulfilled, (state, action) => {
       state.status = "succeeded";
-      state.likedRecipes = { ...action.payload, createdByUser: true };
+      state.likedRecipes = [
+        ...state.likedRecipes,
+        { ...action.payload, createdByUser: true },
+      ];
       state.ingredients = [];
     });
     addCaseRejectedTemplate(builder, createNewRecipe);
