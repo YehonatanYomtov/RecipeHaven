@@ -1,23 +1,14 @@
-export function addCaseFullTemplate(builder, functionName, stateNames, values) {
+export function addCaseFullTemplate(builder, functionName, values) {
   return builder
     .addCase(functionName.pending, (state) => {
       state.status = "loading";
     })
     .addCase(functionName.fulfilled, (state, action) => {
       state.status = "succeeded";
-      if (
-        stateNames?.length === 1 &&
-        values?.length === 1 &&
-        values.at(0) === "payload"
-      ) {
-        state[stateNames] = action.payload;
-      }
 
-      if (stateNames?.length > 1 && values?.length > 1) {
-        stateNames.map((name, i) => {
-          state[name] =
-            values.at(i) === "payload" ? action.payload : values.at(i);
-        });
+      for (const key in values) {
+        const value = values[key];
+        state[key] = value === "payload" ? action.payload : value;
       }
     })
     .addCase(functionName.rejected, (state, action) => {

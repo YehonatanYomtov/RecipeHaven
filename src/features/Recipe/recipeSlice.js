@@ -59,21 +59,13 @@ const recipeSlice = createSlice({
   },
 
   extraReducers(builder) {
-    addCaseFullTemplate(builder, fetchRecipes, ["recipes"], ["payload"]);
+    addCaseFullTemplate(builder, fetchRecipes, { recipes: "payload" });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      fetchFilteredRecipes,
-      ["recipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, fetchFilteredRecipes, { recipes: "payload" });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      fetchSpecificRecipe,
-      ["recipeFullInfo"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, fetchSpecificRecipe, {
+      recipeFullInfo: "payload",
+    });
     //* ====
     addCasePendingTemplate(builder, createNewRecipe);
     builder.addCase(createNewRecipe.fulfilled, (state, action) => {
@@ -98,49 +90,29 @@ const recipeSlice = createSlice({
     });
     addCaseRejectedTemplate(builder, likeRecipe);
     //* ====
-    addCaseFullTemplate(builder, sortRecipesByName, ["recipes"], ["payload"]);
+    addCaseFullTemplate(builder, sortRecipesByName, { recipes: "payload" });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      sortRecipesByCalories,
-      ["recipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, sortRecipesByCalories, { recipes: "payload" });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      sortLikedRecipesByName,
-      ["likedRecipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, sortLikedRecipesByName, {
+      likedRecipes: "payload",
+    });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      sortLikedRecipesByCalories,
-      ["likedRecipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, sortLikedRecipesByCalories, {
+      likedRecipes: "payload",
+    });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      getLikedRecipeCollection,
-      ["likedRecipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, getLikedRecipeCollection, {
+      likedRecipes: "payload",
+    });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      sortLikedRecipesByLiked,
-      ["likedRecipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, sortLikedRecipesByLiked, {
+      likedRecipes: "payload",
+    });
     //* ====
-    addCaseFullTemplate(
-      builder,
-      sortLikedRecipesByCreated,
-      ["likedRecipes"],
-      ["payload"]
-    );
+    addCaseFullTemplate(builder, sortLikedRecipesByCreated, {
+      likedRecipes: "payload",
+    });
     //* ====
     addCaseFullTemplate(builder, resetRecipeHistory);
     //* ====

@@ -39,12 +39,10 @@ const userSlice = createSlice({
   },
 
   extraReducers(builder) {
-    addCaseFullTemplate(
-      builder,
-      signup,
-      ["user", "userSignedIn"],
-      ["payload", true]
-    );
+    addCaseFullTemplate(builder, signup, {
+      user: "payload",
+      userSignedIn: true,
+    });
     //* ====
     addCasePendingTemplate(builder, signin);
     builder.addCase(signin.fulfilled, (state, action) => {
@@ -54,16 +52,11 @@ const userSlice = createSlice({
     });
     addCaseRejectedTemplate(builder, signin);
     //* ====
-    addCaseFullTemplate(
-      builder,
-      logout,
-      ["user", "userSignedIn"],
-      [null, false]
-    );
+    addCaseFullTemplate(builder, logout, { user: null, userSignedIn: false });
     //* =====
-    addCaseFullTemplate(builder, authIsReady, ["user"], ["payload"]);
+    addCaseFullTemplate(builder, authIsReady, { user: "payload" });
     //* =====
-    addCaseFullTemplate(builder, updateProfileImage, ["photoURL"], ["payload"]);
+    addCaseFullTemplate(builder, updateProfileImage, { photoURL: "payload" });
   },
 });
 
