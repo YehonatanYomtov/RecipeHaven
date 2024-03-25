@@ -33,7 +33,7 @@
 }
 
 .left_button:hover {
-  background-image: url("images/Create-recipes_button.png");
+  background-image: url("./images/Create-recipes_button.png");
   transform: translateX(-25%) scale(1.5);
 }
 
@@ -44,7 +44,7 @@
 }
 
 .right_button:hover {
-  background-image: url("images/My-recipes.jpg");
+  background-image: url("./images/My-recipes.jpg");
   transform: translateX(25%) scale(1.5);
 }
 
