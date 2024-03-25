@@ -32,7 +32,7 @@ function LikeButton({ recipe }) {
       }
     >
       <img
-        src={`./images/icons/Heart-${
+        src={`/images/icons/Heart-${
           matchedRecipe ? "liked" : "unliked"
         }-icon.png`}
         alt="like"
@@ -73,7 +73,7 @@ export default LikeButton;
 //       }
 //     >
 //       <img
-//         src={`./images/icons/Heart-${
+//         src={`/images/icons/Heart-${
 //           matchedRecipe ? "liked" : "unliked"
 //         }-icon.png`}
 //         alt="like"

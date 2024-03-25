@@ -20,7 +20,7 @@
 .like_button > img:hover {
   transform: scale(1.3);
   cursor: pointer;
-  background-image: url("images/icons/Heart-liked-icon.png");
+  background-image: url("/images/icons/Heart-liked-icon.png");
   background-position: center;
   background-size: cover;
 }
