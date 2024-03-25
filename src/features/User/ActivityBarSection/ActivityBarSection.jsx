@@ -18,10 +18,17 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 //* styles
 import styles from "./ActivityBarSection.module.css";
+import { useRef } from "react";
+// import { useResizeObserver } from "../../../hooks/useResizeObserver";
 
 function ActivityBarSection({ data }) {
+  const wrapperRef = useRef(null);
+  // const width = useResizeObserver(wrapperRef.current, (entries) => {
+  //   return entries[0]?.contentRect?.width || 0;
+  // });
+
   return (
-    <section className={styles.activity_bar_section}>
+    <section ref={wrapperRef} className={styles.activity_bar_section}>
       <h1>Recipe Activity Dashboard</h1>
 
       <Bar data={data} height={280} />

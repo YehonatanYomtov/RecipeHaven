@@ -1,8 +1,8 @@
 //* react-hooks
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 //* react-router
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 //* redux
 import { useDispatch, useSelector } from "react-redux";
@@ -22,24 +22,39 @@ import { fetchSpecificRecipe } from "../../services/apiGetRecipes";
 
 //* styles
 import styles from "./RecipeFullInfo.module.css";
+import { getLikedRecipeCollection } from "../../features/Recipe/recipeSlice";
 
 function RecipeFullInfo() {
-  const recipeFullInfo = useSelector((state) => state.recipe.RecipeFullInfo);
+  const dispatch = useDispatch();
+  const { recipeID } = useParams();
+  const { pathname } = useLocation();
+
+  const userId = useSelector((state) => state.user.user.uid);
+  const likedRecipes = useSelector((state) => state.recipe.likedRecipes);
+  const recipeFullInfo = useSelector((state) => state.recipe.recipeFullInfo);
   const status = useSelector((state) => state.recipe.status);
   const error = useSelector((state) => state.recipe.error);
 
-  const dispatch = useDispatch();
-  const { recipeID } = useParams();
+  const isLiked = useMemo(() => pathname.includes("liked-recipes"), [pathname]);
 
-  const recipeToArray =
-    recipeFullInfo.id &&
-    Object.entries(recipeFullInfo).map((infoTag) => {
-      return { tag: infoTag[0], info: infoTag[1] };
-    });
+  const recipe = useMemo(() => {
+    if (!isLiked) return recipeFullInfo;
+    return likedRecipes.find((recipe) => recipe.id === recipeID);
+  }, [isLiked, recipeID, likedRecipes, recipeFullInfo]);
+
+  const recipeToArray = useMemo(
+    () =>
+      recipe?.id &&
+      Object.entries(recipe).map((infoTag) => {
+        return { tag: infoTag[0], info: infoTag[1] };
+      }),
+    [recipe]
+  );
 
   useEffect(() => {
-    dispatch(fetchSpecificRecipe(recipeID));
-  }, [dispatch, recipeID]);
+    if (!isLiked) dispatch(fetchSpecificRecipe(recipeID));
+    else if (!likedRecipes.length) dispatch(getLikedRecipeCollection(userId));
+  }, [userId, isLiked, dispatch, recipeID, likedRecipes]);
 
   return (
     <div className={styles.main_container}>
@@ -56,9 +71,9 @@ function RecipeFullInfo() {
       {status === "succeeded" && !error && (
         <>
           <div className={styles.book_left_page}>
-            <h2>{recipeFullInfo.label}</h2>
+            <h2>{recipe.label}</h2>
             <div className={styles.image_container}>
-              <img src={recipeFullInfo.image} alt="Food" />
+              <img src={recipe.image} alt="Food" />
             </div>
           </div>
 

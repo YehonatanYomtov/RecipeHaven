@@ -16,6 +16,14 @@ import { filterRecipesOfCurrentUser } from "../../utils/filterRecipesOfCurrentUs
 
 //* styles
 import styles from "./UserPage.module.css";
+import { useMemo } from "react";
+
+function useFilterRecipesOfCurrentUser(array, userId) {
+  return useMemo(
+    () => filterRecipesOfCurrentUser(array, userId),
+    [array, userId]
+  );
+}
 
 function UserPage() {
   const uid = useSelector((state) => state.user.user.uid);
@@ -24,9 +32,15 @@ function UserPage() {
   const { documents: recipesLikedArray } = useACollection("recipesLiked");
   const { documents: recipesDeletedArray } = useACollection("recipesDeleted");
 
-  const recipesCreated = filterRecipesOfCurrentUser(recipesCreatedArray, uid);
-  const recipesLiked = filterRecipesOfCurrentUser(recipesLikedArray, uid);
-  const recipesDeleted = filterRecipesOfCurrentUser(recipesDeletedArray, uid);
+  const recipesCreated = useFilterRecipesOfCurrentUser(
+    recipesCreatedArray,
+    uid
+  );
+  const recipesLiked = useFilterRecipesOfCurrentUser(recipesLikedArray, uid);
+  const recipesDeleted = useFilterRecipesOfCurrentUser(
+    recipesDeletedArray,
+    uid
+  );
 
   const data = {
     labels: ["Created", "Liked", "Deleted"],

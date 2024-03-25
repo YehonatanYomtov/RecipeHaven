@@ -40,7 +40,7 @@ function CardsDisplayContainer({ className, style, array, sortButton }) {
 
         {(status === "succeeded" || status === "idle") && !error && (
           <>
-            {array.map((recipe) => (
+            {array?.map((recipe) => (
               <RecipeCard recipe={recipe} key={nanoid()} />
             ))}
           </>
