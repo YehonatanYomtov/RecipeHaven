@@ -15,20 +15,20 @@
   justify-content: center;
   transform-style: preserve-3d;
   z-index: 1;
-}
 
-.section_1_main_container > h1 {
-  position: relative;
-  left: -18rem;
-  top: 35rem;
-  font-size: 15rem;
-  font-weight: var(--fw-thin);
-  text-align: center;
-  color: var(--clr--main-white);
-  letter-spacing: 5px;
-  transform: translateZ(-10px) scale(2);
-  text-shadow: 0 0 10px;
-  z-index: 2;
+  h1 {
+    position: relative;
+    left: -18rem;
+    top: 35rem;
+    font-size: 15rem;
+    font-weight: var(--fw-thin);
+    text-align: center;
+    color: var(--clr--main-white);
+    letter-spacing: 5px;
+    transform: translateZ(-10px) scale(2);
+    text-shadow: 0 0 10px;
+    z-index: 2;
+  }
 }
 
 .kitchen_back,
@@ -76,4 +76,36 @@
   width: 100%;
   background-color: var(--clr--main-white);
   z-index: -2;
+}
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .section_1_main_container {
+    h1 {
+      transform: translateZ(-10px) scale(1.5);
+      left: 0.3rem;
+      top: 17rem;
+      font-size: 6rem;
+    }
+  }
+
+  .kitchen_back {
+    left: 0rem;
+  }
+
+  .kitchen_floor {
+    top: 71%;
+    z-index: 3;
+  }
+
+  .plant_1 {
+    transform: rotate(-90deg) translateZ(-11px) scale(3.5);
+    left: -14rem;
+    bottom: -8rem;
+  }
+
+  .plant_2 {
+    transform: rotate(-90deg) translateZ(-9px) scale(2.5);
+    left: -12rem;
+    bottom: -10rem;
+  }
 }

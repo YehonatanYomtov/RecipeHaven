@@ -1,5 +1,5 @@
 //* react-hooks
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 //* react-router
 import { Link } from "react-router-dom";
@@ -32,8 +32,6 @@ function UserTag() {
     dispatch(logout());
     setIsActive(false);
   }
-
-  // useEffect(() => {}, []);
 
   return (
     <>

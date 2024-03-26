@@ -136,3 +136,23 @@
 .dropdown_bottom_button {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 70%);
 }
+
+@media screen and (max-height: 667px), screen and (max-width: 375px) {
+  .main_container {
+    position: absolute;
+    height: 4rem;
+    min-width: 3rem;
+    top: -18.7rem;
+    right: -10.8rem;
+    gap: 0;
+    background-color: transparent;
+    padding: 0.5rem 1rem 0 0;
+
+    .email_text {
+      display: none;
+    }
+  }
+  .dropdown_container {
+    display: none;
+  }
+}

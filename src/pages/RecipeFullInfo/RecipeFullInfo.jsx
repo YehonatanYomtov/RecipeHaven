@@ -17,30 +17,32 @@ import ErrorMessage from "../../components/ui/ErrorMessage/ErrorMessage";
 //* recipe-feature-components
 import RecipeFullInfoTag from "../../features/Recipe/RecipeFullInfoTag/RecipeFullInfoTag";
 
+//* recipe-slice
+import { getLikedRecipeCollection } from "../../features/Recipe/recipeSlice";
+
 //* services
 import { fetchSpecificRecipe } from "../../services/apiGetRecipes";
 
 //* styles
 import styles from "./RecipeFullInfo.module.css";
-import { getLikedRecipeCollection } from "../../features/Recipe/recipeSlice";
 
 function RecipeFullInfo() {
-  const dispatch = useDispatch();
-  const { recipeID } = useParams();
-  const { pathname } = useLocation();
-
   const userId = useSelector((state) => state.user.user.uid);
   const likedRecipes = useSelector((state) => state.recipe.likedRecipes);
   const recipeFullInfo = useSelector((state) => state.recipe.recipeFullInfo);
   const status = useSelector((state) => state.recipe.status);
   const error = useSelector((state) => state.recipe.error);
 
+  const dispatch = useDispatch();
+  const { recipeID } = useParams();
+  const { pathname } = useLocation();
+
   const isLiked = useMemo(() => pathname.includes("liked-recipes"), [pathname]);
 
   const recipe = useMemo(() => {
     if (!isLiked) return recipeFullInfo;
     return likedRecipes.find((recipe) => recipe.id === recipeID);
-  }, [isLiked, recipeID, likedRecipes, recipeFullInfo]);
+  }, [isLiked, recipeFullInfo, likedRecipes, recipeID]);
 
   const recipeToArray = useMemo(
     () =>
@@ -54,7 +56,7 @@ function RecipeFullInfo() {
   useEffect(() => {
     if (!isLiked) dispatch(fetchSpecificRecipe(recipeID));
     else if (!likedRecipes.length) dispatch(getLikedRecipeCollection(userId));
-  }, [userId, isLiked, dispatch, recipeID, likedRecipes]);
+  }, [isLiked, dispatch, userId, recipeID, likedRecipes]);
 
   return (
     <div className={styles.main_container}>
