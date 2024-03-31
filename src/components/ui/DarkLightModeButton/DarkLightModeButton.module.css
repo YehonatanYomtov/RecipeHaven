@@ -44,7 +44,7 @@
   background-size: cover;
 }
 
-@media screen and (max-height: 667px), screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
   .theme_button_base {
     width: 3rem;
     height: 1.5rem;

@@ -19,7 +19,7 @@
   color: var(--clr-blue) !important;
 }
 
-@media screen and (max-height: 667px), screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
   .back_button {
     font-size: var(--fs-1);
     padding: 0 0.1rem 0.1rem 0;

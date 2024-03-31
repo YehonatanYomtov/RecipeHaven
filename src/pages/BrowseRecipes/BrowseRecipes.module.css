@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (max-height: 667px), screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
   .form_container {
     h1 {
       font-size: var(--fs-10);

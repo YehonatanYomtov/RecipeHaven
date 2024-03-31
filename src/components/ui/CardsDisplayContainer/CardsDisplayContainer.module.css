@@ -25,7 +25,7 @@
   gap: 3.5rem;
 }
 
-@media screen and (max-height: 667px), screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
   .main_container > h1 {
     font-size: var(--fs-7);
     letter-spacing: 0.6px;
