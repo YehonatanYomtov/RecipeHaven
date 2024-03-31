@@ -67,7 +67,6 @@
 
 @media only screen and (max-width: 400px) {
   .ul {
-    position: absolute;
     top: 50%;
     transform: translateY(50%);
     background-color: transparent;
