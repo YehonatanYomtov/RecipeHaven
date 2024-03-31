@@ -19,10 +19,10 @@
   color: var(--clr-blue) !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 400px) {
   .back_button {
     font-size: var(--fs-1);
     padding: 0 0.1rem 0.1rem 0;
-    border-bottom: 1.5px solid var(--clr-grey-light);
+    border-bottom: none;
   }
 }

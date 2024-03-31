@@ -57,7 +57,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 400px) {
   .main_container {
     width: 22rem;
     padding: 1.5rem 1.5rem 5.5rem 1.5rem;

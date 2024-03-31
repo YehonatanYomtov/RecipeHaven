@@ -59,7 +59,7 @@
   color: var(--clr--main-green);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 400px) {
   .ul {
     height: 10rem;
     width: 12rem;
