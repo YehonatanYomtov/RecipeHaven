@@ -42,7 +42,7 @@
   }
 }
 
-@media screen and (max-width: 385px) {
+@media only screen and (max-width: 768px) {
   .sort_by_container {
     label {
       font-size: var(--fs-1_5);

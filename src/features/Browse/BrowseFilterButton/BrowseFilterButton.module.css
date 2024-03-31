@@ -5,7 +5,7 @@
   transform: translateX(-43%);
 }
 
-@media screen and (max-width: 385px) {
+@media only screen and (max-width: 768px) {
   .browse_filter_button {
     padding: 0.5rem 0.65rem;
     font-size: var(--fs-1);
