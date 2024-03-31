@@ -88,16 +88,16 @@
 
     input {
       width: 13rem;
-      padding: 0.5rem;
-      font-size: var(--fs-1);
+      padding: 0.8rem;
+      font-size: var(--fs-1_5);
       z-index: 2;
     }
 
     button {
       position: relative;
       right: 1rem;
-      padding: 0.35rem 0.5rem 0.35rem 1.4rem;
-      font-size: var(--fs-1);
+      padding: 0.7rem 0.5rem 0.7rem 1.5rem;
+      font-size: var(--fs-1_5);
       background-color: var(--clr-blue);
       color: white;
       border-left: none;

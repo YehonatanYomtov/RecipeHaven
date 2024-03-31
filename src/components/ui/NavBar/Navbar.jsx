@@ -9,10 +9,27 @@ import UserTag from "../../../features/User/UserTag/UserTag";
 
 //* styles
 import styles from "./NavBar.module.css";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobileScreen(window.innerWidth <= 400);
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <ul className={styles.ul}>
+    <ul className={isMobileScreen ? styles.ul : styles.mobile_navbar}>
       <li>
         <Link to="/">
           <Logo />
@@ -27,7 +44,11 @@ function Navbar() {
           to="/"
           end
         >
-          Home
+          {isMobileScreen ? (
+            <img src="./images/icons/Home-icon.png" alt="home" />
+          ) : (
+            "Home"
+          )}
         </NavLink>
       </li>
 
@@ -38,7 +59,11 @@ function Navbar() {
           }
           to="/browse"
         >
-          Browse recipes
+          {isMobileScreen ? (
+            <img src="./images/icons/Browse-icon.png" alt="browse" />
+          ) : (
+            "Browse recipes"
+          )}
         </NavLink>
       </li>
 
@@ -49,7 +74,11 @@ function Navbar() {
           }
           to="/recipes"
         >
-          Recipes
+          {isMobileScreen ? (
+            <img src="./images/icons/Recipes-icon.png" alt="browse" />
+          ) : (
+            "Recipes"
+          )}
         </NavLink>
       </li>
 

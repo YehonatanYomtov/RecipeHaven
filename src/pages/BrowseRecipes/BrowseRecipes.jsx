@@ -7,9 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 //* redux-toolkit
 import { nanoid } from "@reduxjs/toolkit";
 
-//* recipe-feature-components
-// import RecipeCard from "../../features/Recipe/RecipeCard/RecipeCard";
-
 //* browse-feature-components
 import BrowseHistoryContainer from "../../features/Browse/BrowseHistoryContainer/BrowseHistoryContainer";
 import FilterOptions from "../../features/Browse/FilterOptionsSection/FilterOptionsSection";
