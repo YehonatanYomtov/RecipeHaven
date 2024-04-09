@@ -137,6 +137,24 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 70%);
 }
 
+@media only screen and (max-width: 1000px) {
+  .main_container {
+    padding: 0 1.5rem;
+    transition: all 0.3s;
+
+    .email_text {
+      font-size: var(--fs-1_5);
+      font-weight: var(--fw-bold);
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main_container {
+    padding: 0 1rem;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .main_container {
     position: absolute;

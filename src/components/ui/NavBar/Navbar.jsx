@@ -29,7 +29,11 @@ function Navbar() {
   }, []);
 
   return (
-    <ul className={!isMobileScreen ? styles.ul : styles.mobile_navbar}>
+    <ul
+      className={
+        !isMobileScreen ? styles.ul : `${styles.ul}  ${styles.mobile_navbar}`
+      }
+    >
       <li>
         <Link to="/">
           <Logo />

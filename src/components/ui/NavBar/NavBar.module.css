@@ -59,10 +59,30 @@
   color: var(--clr--main-green);
 }
 
-.mobile_navbar {
+/* .mobile_navbar {
   position: absolute;
   display: flex;
   flex-direction: column;
+} */
+
+@media only screen and (max-width: 1000px) {
+  .ul {
+    gap: 2rem;
+  }
+
+  .ul .nav_link {
+    font-size: var(--fs-1_5);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ul {
+    gap: 1.5rem;
+  }
+
+  .ul .nav_link {
+    font-size: var(--fs-1_5);
+  }
 }
 
 @media only screen and (max-width: 400px) {

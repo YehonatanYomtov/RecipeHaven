@@ -14,6 +14,32 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .container {
+    transition: all 0.3s;
+
+    .logo {
+      width: 3rem;
+    }
+
+    .text {
+      font-size: var(--fs-3);
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    .logo {
+      width: 2.5rem;
+    }
+
+    .text {
+      font-size: var(--fs-2);
+    }
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .container {
     position: absolute;
