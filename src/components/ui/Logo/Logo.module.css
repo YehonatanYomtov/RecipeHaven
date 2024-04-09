@@ -17,8 +17,8 @@
 @media only screen and (max-width: 400px) {
   .container {
     position: absolute;
-    top: -18rem;
-    left: -11.8rem;
+    top: -32.8rem;
+    left: 0;
     gap: 0.2rem;
 
     .logo {

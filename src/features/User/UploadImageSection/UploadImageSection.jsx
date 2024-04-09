@@ -41,6 +41,7 @@ function UploadImageSection({ isClicked }) {
         <input
           disabled={status === "loading"}
           type="file"
+          accept="image/*"
           onChange={handleImageSelected}
         />
       </label>

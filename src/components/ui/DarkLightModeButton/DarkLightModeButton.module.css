@@ -46,6 +46,8 @@
 
 @media only screen and (max-width: 400px) {
   .theme_button_base {
+    top: 2rem;
+    right: 6rem;
     width: 3rem;
     height: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px inset;

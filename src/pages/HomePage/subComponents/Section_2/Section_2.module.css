@@ -77,27 +77,12 @@
   background-color: var(--clr--main-green);
   box-shadow: var(--box-shadow--main);
 
-  /* animation: slide-in-from-bottom forwards;
-  animation-timeline: view();
-  animation-range-start: 30px; */
-  /* animation-range-end: 200px; */
-
-  /* transition: 2s; */
   z-index: 1;
 }
 
 .start_creating_link_button:hover {
   background-color: var(--clr--hover--main-green);
 }
-
-/* .cover {
-  position: absolute;
-  height: 10rem;
-  width: 100vw;
-  top: 250%;
-  transform: translateZ(0) scale(100%);
-  z-index: 99;
-} */
 
 @keyframes slide-in-from-left {
   from {
@@ -136,13 +121,12 @@
 }
 
 @keyframes slide-in-from-bottom {
-  /* from {
-    bottom: 0;
-  } */
-
   100% {
     bottom: 50%;
     transform: translateY(-100%);
     transition: 3s;
   }
+}
+
+@media only screen and (max-width: 400px) {
 }
