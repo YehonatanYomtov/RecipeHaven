@@ -81,3 +81,61 @@
   bottom: 0;
   height: 70rem;
 }
+
+@media only screen and (max-width: 400px) {
+  .box_1,
+  .box_2,
+  .box_3 {
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .box_1 > h2,
+  .box_2 > h2,
+  .box_3 > h2 {
+    max-width: unset;
+    font-size: var(--fs-8);
+    letter-spacing: 0.7px;
+  }
+
+  .box_1 > h2 {
+    margin-left: 0;
+    color: var(--clr-grey-medium);
+  }
+
+  .box_2 > h2 {
+    position: relative;
+    top: -15rem;
+    width: unset;
+  }
+
+  .box_3 > h2 {
+    position: relative;
+    top: -12rem;
+    margin-left: 9rem;
+    color: var(--clr--main-white);
+  }
+
+  .create_img {
+    transform: rotate(30deg);
+    max-width: 55rem;
+    border-radius: 22%;
+    top: 4rem;
+    left: -16rem;
+  }
+
+  .binoculars_img {
+    left: -10rem;
+    width: 40rem;
+    top: 7rem;
+    transform: rotate(-35deg);
+  }
+
+  .thumbs_up_img {
+    right: -5rem;
+    bottom: 5rem;
+    height: 35rem;
+  }
+}
