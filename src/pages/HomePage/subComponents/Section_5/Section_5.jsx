@@ -7,12 +7,10 @@ import styles from "./Section_5.module.css";
 function Section_5() {
   return (
     <section className={styles.section_5_main_container}>
-      <div className={styles.blur}></div>
-
       <div className={styles.mosaic_container}>
         <Link className={styles.link_item_one} to="browse">
           <img
-            className={styles.m_g}
+            className={styles.magnifying_glass}
             src="/images/animated/Magnifying-glass.png"
             alt="Magnifying-glass"
           />
@@ -45,7 +43,7 @@ function Section_5() {
 
       <img className={styles.table} src="/images/Table.png" alt="Table" />
 
-      <p className={styles.footer}>Yonski`s INC ©</p>
+      <p className={styles.footer}>Yomtov INC ©</p>
     </section>
   );
 }
