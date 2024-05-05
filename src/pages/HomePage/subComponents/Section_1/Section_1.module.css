@@ -15,7 +15,7 @@
     font-size: 15rem;
     font-weight: var(--fw-thin);
     text-align: center;
-    color: var(--clr--main-white);
+    color: white;
     letter-spacing: 5px;
     transform: translateZ(-10px) scale(2);
     text-shadow: 0 0 10px;

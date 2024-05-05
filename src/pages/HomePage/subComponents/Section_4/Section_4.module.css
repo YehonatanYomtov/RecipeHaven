@@ -10,6 +10,7 @@
   gap: 10rem;
   background-color: var(--clr--main-white);
   overflow: hidden;
+  background-color: aqua;
 }
 
 .section_4_main_container > h1 {

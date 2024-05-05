@@ -1,3 +1,6 @@
+//* react-hooks
+import { useEffect, useState } from "react";
+
 //* react-router
 import { Link, NavLink } from "react-router-dom";
 
@@ -9,10 +12,14 @@ import UserTag from "../../../features/User/UserTag/UserTag";
 
 //* styles
 import styles from "./NavBar.module.css";
-import { useEffect, useState } from "react";
 
 function Navbar() {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const [navBarOpened, setNavBarOpened] = useState(false);
+
+  function handleOpenHamburgerMenu() {
+    setNavBarOpened((cur) => !cur);
+  }
 
   useEffect(() => {
     function handleResize() {
@@ -29,67 +36,105 @@ function Navbar() {
   }, []);
 
   return (
-    <ul
-      className={
-        !isMobileScreen ? styles.ul : `${styles.ul}  ${styles.mobile_navbar}`
-      }
-    >
-      <li>
-        <Link to="/">
-          <Logo />
-        </Link>
-      </li>
+    <>
+      {isMobileScreen && (
+        <button className={styles.hamburger} onClick={handleOpenHamburgerMenu}>
+          <img
+            src={`./images/icons/${
+              !navBarOpened ? "Hamburger" : "Close-Window"
+            }-icon.png`}
+            alt=""
+          />
+        </button>
+      )}
 
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
-          }
-          to="/"
-          end
-        >
+      <ul
+        className={
+          !isMobileScreen
+            ? styles.ul
+            : !navBarOpened
+            ? styles.mobile_navbar
+            : `${styles.mobile_navbar} ${styles.opened_hamburger}`
+        }
+      >
+        <li>
+          <Link to="/">
+            <Logo />
+          </Link>
+        </li>
+
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+            }
+            to="/"
+            end
+          >
+            {isMobileScreen ? (
+              <img
+                src={`./images/icons/Home-${
+                  isMobileScreen ? "mobile-" : ""
+                }icon.png`}
+                alt="home"
+              />
+            ) : (
+              "Home"
+            )}
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+            }
+            to="/browse"
+          >
+            {isMobileScreen ? (
+              <img
+                src={`./images/icons/Browse-${
+                  isMobileScreen ? "mobile-" : ""
+                }icon.png`}
+                alt="browse"
+              />
+            ) : (
+              "Browse recipes"
+            )}
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
+            }
+            to="/recipes"
+          >
+            {isMobileScreen ? (
+              <img
+                src={`./images/icons/Recipes-${
+                  isMobileScreen ? "mobile-" : ""
+                }icon.png`}
+                alt="recipes"
+              />
+            ) : (
+              "Recipes"
+            )}
+          </NavLink>
+        </li>
+
+        <li>
           {isMobileScreen ? (
-            <img src="./images/icons/Home-icon.png" alt="home" />
+            <NavLink to="/user">
+              <UserTag />
+            </NavLink>
           ) : (
-            "Home"
+            <UserTag />
           )}
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
-          }
-          to="/browse"
-        >
-          {isMobileScreen ? (
-            <img src="./images/icons/Browse-icon.png" alt="browse" />
-          ) : (
-            "Browse recipes"
-          )}
-        </NavLink>
-      </li>
-
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? `${styles.nav_link} ${styles.active}` : styles.nav_link
-          }
-          to="/recipes"
-        >
-          {isMobileScreen ? (
-            <img src="./images/icons/Recipes-icon.png" alt="browse" />
-          ) : (
-            "Recipes"
-          )}
-        </NavLink>
-      </li>
-
-      <li>
-        <UserTag />
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </>
   );
 }
 

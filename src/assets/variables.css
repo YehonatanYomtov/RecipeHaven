@@ -114,7 +114,12 @@ body,
 #root {
   min-height: 100%;
   width: 100%;
+
   z-index: 1;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
