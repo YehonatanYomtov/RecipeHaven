@@ -62,8 +62,8 @@
 
 .hamburger {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
 
   display: flex;
   justify-content: center;
@@ -71,10 +71,15 @@
 
   background-color: transparent;
   padding: 1.2rem;
-  border: none;
-  border-radius: 10px 0 0 10px;
+  /* border: 1px solid white; */
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 0 0 0 10px;
   cursor: pointer;
   z-index: 99;
+  animation: un-fade-border forwards 1.2s;
 
   img {
     width: 2.5rem;
@@ -83,8 +88,9 @@
 
 .mobile_navbar {
   position: absolute;
-  top: 0.5rem;
-  right: -5rem;
+  transform: translateY(-30rem);
+  transition: 0.5s;
+  right: 0;
   height: unset;
 
   display: flex;
@@ -92,12 +98,18 @@
   justify-content: center;
   flex-direction: column-reverse;
 
-  border-radius: 10px 0 0 10px;
   border: 1px solid white;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.195);
-  box-shadow: var();
-
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(1, 1, 1, 0.33) 0%,
+    rgba(9, 9, 9, 0.086) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.237) 0px 5px 15px;
   z-index: 50;
 
   li {
@@ -110,8 +122,44 @@
 }
 
 .opened_hamburger {
-  transform: translateX(-5rem);
-  transition: 0.5s;
+  transform: translateY(0);
+  transition: 0.7s;
+}
+
+:has(.opened_hamburger) .hamburger {
+  border: none;
+  animation: fade-in forwards 1s;
+
+  img {
+    width: 1.5rem;
+    animation: fade-in forwards 1s;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    right: 0.5rem;
+  }
+}
+
+@keyframes un-fade-border {
+  from {
+    border: none;
+  }
+
+  to {
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 0 0 0 10px;
+    /* border: 1px solid white; */
+  }
 }
 
 @media only screen and (max-width: 1000px) {
