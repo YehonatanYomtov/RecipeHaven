@@ -130,6 +130,10 @@ li {
   list-style-type: none;
 }
 
+img {
+  -webkit-tap-highlight-color: transparent;
+}
+
 input:focus,
 select:focus,
 textarea:focus,

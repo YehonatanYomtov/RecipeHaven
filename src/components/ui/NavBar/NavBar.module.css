@@ -62,13 +62,17 @@
 
 .hamburger {
   position: absolute;
-  top: 25%;
-  right: 0;
-  height: 4rem;
-  border: none;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: transparent;
-  border-radius: 10px 0 0 10px;
   padding: 1.2rem;
+  border: none;
+  border-radius: 10px 0 0 10px;
   cursor: pointer;
   z-index: 99;
 
@@ -79,7 +83,7 @@
 
 .mobile_navbar {
   position: absolute;
-  top: 25%;
+  top: 0.5rem;
   right: -5rem;
   height: unset;
 
@@ -87,12 +91,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column-reverse;
-  /* gap: 3rem; */
 
   border-radius: 10px 0 0 10px;
   border: 1px solid white;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.281);
+  background-color: rgba(0, 0, 0, 0.195);
+  box-shadow: var();
 
   z-index: 50;
 
