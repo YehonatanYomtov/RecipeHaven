@@ -184,3 +184,32 @@
     left: 150%;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .mosaic_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .link_item_one,
+  .link_item_two,
+  .link_item_three {
+    /* transform: unset; */
+  }
+
+  .table {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 0.3rem;
+    bottom: 0;
+    background-color: var(--clr--main-green);
+    color: black;
+  }
+}

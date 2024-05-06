@@ -46,8 +46,8 @@
 
 @media only screen and (max-width: 400px) {
   .theme_button_base {
-    top: 2rem;
-    right: 7rem;
+    top: 1rem;
+    left: 1rem;
 
     width: 3.4rem;
     height: 1.7rem;

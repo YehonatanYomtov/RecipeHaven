@@ -69,13 +69,13 @@
   justify-content: center;
   align-items: center;
 
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.429);
   padding: 1.2rem;
   /* border: 1px solid white; */
   border-top: none;
   border-right: none;
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+  border-left: 1px solid rgba(255, 255, 255, 0.623);
   border-radius: 0 0 0 10px;
   cursor: pointer;
   z-index: 99;
@@ -98,17 +98,11 @@
   justify-content: center;
   flex-direction: column-reverse;
 
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.623);
   border-top: none;
   border-radius: 0 0 10px 10px;
   padding: 1rem;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(1, 1, 1, 0.33) 0%,
-    rgba(9, 9, 9, 0.086) 100%
-  );
+  background-color: rgba(0, 0, 0, 0.429);
   box-shadow: rgba(0, 0, 0, 0.237) 0px 5px 15px;
   z-index: 50;
 
@@ -129,6 +123,7 @@
 :has(.opened_hamburger) .hamburger {
   border: none;
   animation: fade-in forwards 1s;
+  background-color: transparent;
 
   img {
     width: 1.5rem;
@@ -150,14 +145,16 @@
 @keyframes un-fade-border {
   from {
     border: none;
+    background-color: transparent;
   }
 
   to {
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+    border-left: 1px solid rgba(255, 255, 255, 0.623);
     border-radius: 0 0 0 10px;
+    background-color: rgba(0, 0, 0, 0.429);
     /* border: 1px solid white; */
   }
 }
@@ -181,52 +178,3 @@
     font-size: var(--fs-1_5);
   }
 }
-
-/* @media only screen and (max-width: 400px) {
-  .ul {
-    position: fixed;
-    top: 50%;
-    transform: translateY(50%);
-    background-color: transparent;
-
-    flex-direction: column;
-    align-items: end;
-    gap: 1rem;
-
-    box-shadow: none;
-  }
-
-  .ul > * {
-    height: auto;
-  }
-
-  .ul .nav_link {
-    letter-spacing: 0.6px;
-
-    background-color: var(--clr--main-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem;
-    border-radius: 1rem 0 0 1rem;
-
-    font-weight: var(--fw-light);
-    font-size: var(--fs-1_5);
-
-    box-shadow: var(--box-shadow--main);
-  }
-
-  .ul .nav_link:hover,
-  .ul .nav_link:focus {
-    background-color: var(--clr--hover--main-white);
-  }
-
-  .ul .nav_link > img {
-    width: 1.5rem;
-  }
-
-  .ul .nav_link:hover::after {
-    transform: scaleX(0);
-    transform-origin: unset;
-  }
-} */
