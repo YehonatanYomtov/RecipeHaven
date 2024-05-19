@@ -23,12 +23,42 @@
     letter-spacing: 0.6px;
     font-size: var(--fs-2);
     font-weight: var(--fw-medium);
-    color: var(--clr-grey-medium);
+    color: var(--clr-grey-dark);
 
     span {
       color: var(--clr--main-green);
       font-size: var(--fs-3);
       font-weight: var(--fw-bold);
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .recipes_info_main_container {
+    border: none;
+    border-radius: unset;
+    border-top: 1px solid var(--clr-grey-light);
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      text-align: left;
+      letter-spacing: 0.6px;
+    }
+
+    p {
+      letter-spacing: 0.8px;
+      font-size: var(--fs-1_5);
+      font-weight: var(--fw-light);
+
+      span {
+        color: var(--clr--main-green);
+        font-size: var(--fs-2);
+        font-weight: var(--fw-medium);
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 .account_section_main_container {
   position: relative;
   height: 100%;
+  width: 100%;
   margin-bottom: auto;
   border-radius: 15px;
   padding: 2rem;
@@ -89,5 +90,28 @@
 
   .text_button_container:hover .log_out_icon {
     background-image: url("/images/icons/Signout-hover-icon.png");
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .account_section_main_container {
+    border: none;
+    border-radius: unset;
+    border-top: 1px solid var(--clr-grey-light);
+    padding: 2rem 0 2rem 0;
+
+    .change_profile_image_section {
+      gap: 2rem;
+    }
+
+    .text_button_container,
+    a {
+      gap: 1rem;
+    }
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
+    }
   }
 }

@@ -16,3 +16,10 @@
 .text {
   font-size: var(--fs-1);
 }
+
+@media only screen and (max-width: 400px) {
+  .container,
+  .container * {
+    display: none;
+  }
+}

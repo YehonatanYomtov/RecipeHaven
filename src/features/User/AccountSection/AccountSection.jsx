@@ -7,6 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 //* user-slice
 import { logout, setIsClicked } from "../userSlice";
 
+//* recipe-slice
+import { resetRecipeHistory } from "../../Recipe/recipeSlice";
+
 //* components-UI
 // import LoadingSpinner from "../../../components/ui/LoadingSpinner/LoadingSpinner";
 
@@ -18,7 +21,6 @@ import { Dna } from "react-loader-spinner";
 
 //* styles
 import styles from "./AccountSection.module.css";
-import { resetRecipeHistory } from "../../Recipe/recipeSlice";
 
 function AccountSection() {
   const status = useSelector((state) => state.user.status);

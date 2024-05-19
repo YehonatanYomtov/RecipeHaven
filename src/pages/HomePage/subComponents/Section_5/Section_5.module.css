@@ -194,12 +194,14 @@
     padding-bottom: 5rem;
   }
 
-  .link_item_one,
-  .link_item_two,
-  .link_item_three {
-    /* transform: unset; */
+  .magnifying_glass {
+    width: 18rem;
+    bottom: 2rem;
+    left: -3rem;
   }
 
+  .pen,
+  .popcorn,
   .table {
     display: none;
   }

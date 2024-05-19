@@ -41,7 +41,7 @@ function Navbar() {
         <button className={styles.hamburger} onClick={handleOpenHamburgerMenu}>
           <img
             src={`./images/icons/${
-              !navBarOpened ? "Hamburger" : "Close-Window"
+              !navBarOpened ? "Hamburger" : "Close-window"
             }-icon.png`}
             alt=""
           />

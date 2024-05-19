@@ -1,5 +1,6 @@
 .doughnut_section_container {
   height: 100%;
+  width: 100%;
   border-radius: 15px;
   padding: 2rem;
   border: 1px solid var(--clr-grey-light);
@@ -23,5 +24,20 @@
 
   canvas {
     height: 7rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .doughnut_section_container {
+    border: none;
+    border-radius: unset;
+    border-top: 1px solid var(--clr-grey-light);
+    padding: 2rem 0 2rem 0;
+    gap: 2rem;
+
+    h1 {
+      text-align: left;
+      letter-spacing: 0.6px;
+    }
   }
 }

@@ -23,3 +23,18 @@
     font-weight: var(--fw-bold);
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .activity_bar_section {
+    border: none;
+    border-radius: unset;
+    border-top: 1px solid var(--clr-grey-light);
+    gap: 2rem;
+    padding: 2rem 0 2rem 0;
+
+    h1 {
+      text-align: left;
+      letter-spacing: 0.6px;
+    }
+  }
+}
