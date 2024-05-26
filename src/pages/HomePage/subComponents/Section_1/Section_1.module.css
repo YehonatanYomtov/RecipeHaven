@@ -10,9 +10,9 @@
 
   h1 {
     position: relative;
-    left: -35rem;
+    left: -25vw;
     top: 60%;
-    font-size: 15rem;
+    font-size: 15vw;
     font-weight: var(--fw-thin);
     text-align: center;
     color: white;
@@ -70,8 +70,8 @@
   z-index: -2;
 }
 
-@media only screen and (max-width: 1500px) {
-  /* .section_1_main_container {
+/* @media only screen and (max-width: 1300px) {
+ .section_1_main_container {
     h1 {
       transform: translateZ(-10px) scale(1);
       left: -18rem;
@@ -96,8 +96,8 @@
     width: 20rem;
     left: -30rem;
     bottom: -15rem;
-  } */
-}
+  } 
+} */
 
 @media only screen and (max-width: 400px) {
   .section_1_main_container {
