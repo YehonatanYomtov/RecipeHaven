@@ -51,13 +51,13 @@
 
 .plant_1 {
   transform: rotate(-90deg) translateZ(-11px) scale(2.1);
-  left: -80rem;
+  left: -65vw;
   bottom: -15rem;
 }
 
 .plant_2 {
   transform: rotate(-90deg) translateZ(-9px) scale(1.9);
-  left: -63rem;
+  left: -65vw;
   bottom: -30rem;
 }
 
